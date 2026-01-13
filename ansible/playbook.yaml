@@ -1,0 +1,68 @@
+- hosts: web
+  become: yes
+
+  vars:
+    app_dir: /webpage
+    apache_root: /var/www/html
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install required packages
+      apt:
+        name:
+          - apache2
+          - curl
+        state: present
+
+    - name: Start Apache
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: Install Node.js 18
+      shell: |
+        curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+        apt install -y nodejs
+      args:
+        creates: /usr/bin/node
+
+    - name: Copy React project files
+      copy:
+        src: webpage/
+        dest: "{{ app_dir }}/"
+
+    - name: Install npm dependencies
+      shell: npm install
+      args:
+        chdir: "{{ app_dir }}"
+
+    - name: Build React app
+      shell: npm run build
+      args:
+        chdir: "{{ app_dir }}"
+
+    - name: Remove default Apache files
+      file:
+        path: "{{ apache_root }}"
+        state: absent
+
+    - name: Recreate Apache directory
+      file:
+        path: "{{ apache_root }}"
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0755'
+
+    - name: Deploy build files to Apache
+      copy:
+        src: "{{ app_dir }}/dist/"
+        dest: "{{ apache_root }}/"
+        owner: www-data
+        group: www-data
+        mode: '0755'
+        remote_src: yes
