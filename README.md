@@ -16,8 +16,13 @@ Automate the deployment of a simple static website on AWS EC2 using Terraform, A
 This project demonstrates **Infrastructure as Code (IaC)**, **configuration management**, and **automated deployment pipelines**.
 
 ---
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e3ab8ef5-56d2-4874-aac9-0f86760e00f2" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/002adef8-7872-49a9-b093-b335c0b810ee" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/58965af9-3d69-43cf-bc0e-c285d2ed7ad8" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98a7a20e-e5c2-44c6-adf7-ae4dee8bdd91" />
 
-## Architecture Diagram
+
+
 
 ## Prepared by:
 ## *Shaik Moulali*
