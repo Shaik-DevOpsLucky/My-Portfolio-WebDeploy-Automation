@@ -6,7 +6,7 @@ This guide demonstrates how to set up a CI/CD pipeline using Jenkins, Docker, AW
 
 ## 1️⃣ Launch Infrastructure
 
-- Launch an **Ubuntu 24.04 AMI** instance (`t2.large` recommended).
+- Launch an **Ubuntu 24.04 AMI** instance (`t3.large` recommended).
 - Create an **IAM Role** with Administrator policy (or limited permissions if desired) and attach it to the Jenkins VM.
 - Create an **ECR Repository**:
 
