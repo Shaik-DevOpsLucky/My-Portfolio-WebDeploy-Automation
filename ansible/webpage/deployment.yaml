@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: deployment
+metadata:
+  name: portfolio-deployment
+spec:
+  replicas: 2
+    selector:
+        matchLabels:
+        app: portfolio-app
+    template:
+        metadata:
+        labels:
+            app: portfolio-app
+        spec:
+        containers:
+            - name: portfolio-container
+            image: 596575051640.dkr.ecr.ap-south-1.amazonaws.com/shaik-moulali-portfolio-app:latest
+            ports:
+            - containerPort: 80
