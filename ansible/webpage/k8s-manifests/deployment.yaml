@@ -14,6 +14,6 @@ spec:
         spec:
         containers:
             - name: portfolio-container
-            image: 596575051640.dkr.ecr.ap-south-1.amazonaws.com/shaik-moulali-portfolio-app:latest
+            image: "596575051640.dkr.ecr.ap-south-1.amazonaws.com/shaik-moulali-portfolio-app:latest"
             ports:
             - containerPort: 80
