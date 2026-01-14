@@ -206,6 +206,13 @@ This setup gives you a **full CI/CD pipeline** with:
 * EKS cluster deployments
 * Kubernetes-managed application
 
+## ✅ Delete EKS Cluster
+
+```bash
+eksctl delete cluster --name Shaik-Ecom-cluster --region us-east-1
+```
+---
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ea387934-c12a-4ca2-b0a5-6dfbac3b80cb" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/88271455-db2b-439d-83a6-933b4a2bb4e1" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/44ddb001-017c-487c-a203-9240923d4e32" />
