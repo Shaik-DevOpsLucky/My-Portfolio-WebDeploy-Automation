@@ -211,9 +211,9 @@ This setup gives you a **full CI/CD pipeline** with:
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/44ddb001-017c-487c-a203-9240923d4e32" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/77a03f57-c4d1-4e79-91ae-9d188fe27236" />
 
-
-
-
+---
+## Prepared by:
+## *Shaik Moulali*
 
 
 ---
